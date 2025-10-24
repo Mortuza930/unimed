@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px;
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            width: 220px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .card a:hover {
+            color: #007bff;
+        }
+        
+       .logo {
+        height: 90px;
+        width: auto;
+        margin-right: 10px;
+        vertical-align: middle;
+       }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center;">
+      <img src="{% static 'product/logo.png' %}" alt="Company Logo" class="logo" />
+      <span class="welcome" style="margin-left: 15px;">Welcome to UniMed Product Dashboard</span>
+    </div></header>
+
+    <div class="dashboard">
+        <div class="card">
+            <div>Tablet</div>
+            <a href="/tablet/">View Products</a>
+        </div>
+        <div class="card">
+            <div>Capsule</div>
+            <a href="/capsule/">View Products</a>
+        </div>
+        <div class="card">
+            <div>PFS</div>
+            <a href="/pfs/">View Products</a>
+        </div>
+        <div class="card">
+            <div>Syrup</div>
+            <a href="/syrup/">View Products</a>
+        </div>
+    </div>
+</body>
+</html>
+
